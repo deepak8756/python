@@ -58,18 +58,48 @@ for i in range (0,len(a),2):
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+-> WHILE:-
 
+i=0
 
+while i<=10:
+    print(i)
+    i+=1
+    
+    
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
 
+-------
+while loop meeh len function ki help see list ko print kro
 
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+size=len(a)
+i=0
+while i<size:
+    print(a[i])
+    i+=1
 
+output:- 
 
-
-
-
-
-
-
+10
+deepak
+20
+30
+amit
+a
+9
+z
+xyza
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 ---->NESTED if  elif :-
@@ -100,4 +130,109 @@ to x ko call kiye ho iss case meeh to smjh jao ki lambda ko call kr rhe hai
       
       output= 12
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+->  LIST:-
+
+list meeh kisi bhi trah ke primitive data type store krskte hai 
+primitive ya inbuilt data types ek hi hai->   int,char,float,string,double   Aur list ko bnate time square bracket ka use hota hai
+
+SOME OPERATIONS ON LIST ARE:-
+
+1-> simple ek line meeh print kradega print statement
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+print(a)
+
+output:-  [10, 'deepak', 20, 30, 'amit', 'a', 9, 'z', 'xyza']
+-------------------------------
+
+2->  for loop ka use krke
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+for i in a:
+print(i)
+
+
+output:-  
+10
+deepak
+20
+30
+amit
+a
+9
+z
+xyza
+
+------------------------------------
+. 
+3->range ka use krke iterate kro
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+for i in range(0,len(a)):
+print(a[i])
+
+output:-
+
+10
+deepak
+20
+30
+amit
+a
+9
+z
+xyza
+-----------------------------------
+
+4-> agar -1 daldo print meeh to wo list ke last index ko point krega aisse hi minus minus krte jao wo agee ki traf bdhta jaega 
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+
+print(a[-4])
+
+output:- a
+
+agar print(a[-1]) krta to ye xyza deta 
+------------------------------------------
+
+
+5->  APPEND aur INSERT OPERATION:-
+
+
+->Append krenge to ye list ke last meeh jo bhi append kiya usse jood dega 
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+a.append(100)
+print(a)
+
+output:-
+[10, 'deepak', 20, 30, 'amit', 'a', 9, 'z', 'xyza', 100]
+
+-------------------
+INSERT:-  INSERT MEEH jha hum chahe wha insert krkte hai list meeh mtlb kii jiss index par meeh chahu
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+a.insert(3,"singh")   -> list ke 3rd index par singh ko krdo insert aur index 0 see start hota hai isme bhi
+print(a)
+
+
+output:-[10, 'deepak', 20, '100000000', 30, 'amit', 'a', 9, 'z', 'xyza']
+Note:- jaise list ki size 7 hai manlo aur hum keh rhe 15 wale index par 100 ko insert kro to last meeh krdega out of bound nhi dega ekdum last meeh krdega le jake
+
+---------------------------------------
+
+6-> List ki length pta krna hai to simple len(list ka naam)
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+aa=len(a)
+print(aa)
+
+output:- 9
+---------------------------------
+
+7->
+
+
 
