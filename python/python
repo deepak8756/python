@@ -1,0 +1,103 @@
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+-> FOR LOOP:-
+
+------------------------------------------------
+a=[12,'apple',13,15,17,'bat']       //ye list bnai hai
+
+for i in a:                         //for loop lgaya hai kha hai i (a ke andar hai) simple ab a wali list meeh i ko lga diye ho to ab i iterate krta jaega
+    print(i)                       //i apne appp puri list par iterate krta jaega 
+   
+#OUTPUT=   
+12
+apple
+13
+15
+17
+bat
+-------------------------------------   
+    
+          Range:- range bhi use krskte hai for loop meeh range mtlb kha taak jana jo range dogee usse ek kaam jaega
+The range() is an in-built function in Python.
+It returns a sequence of numbers starting from zero and increment by 1 by default and stops before the given number.
+
+The range() function defaults to 0 as a starting value,
+however it is possible to specify the starting value by adding a parameter: range(2, 6), which means values from 2 to 6 (but not including 6):
+   range(start, stop) is "front-inclusive" and "end-exclusive"
+   
+   a=[12,'apple',13,15,17,'bat']
+
+for i in range (0,len(a)):  // length to 6 arhi hogi na 0-5 taak chlega last wale ko exclude krta hai
+    print(a[i])
+    
+    
+OUTPUT :-
+12
+apple
+13
+15
+17
+bat    
+  
+----------------------------------------------------------------------------------------------
+    range meeh directly i ko kittna bdhana hai ye bhi kr skte hai
+    range(start, stop, step)   //steps means itte step skip krdo
+    
+    
+    a=[12,'apple',13,15,17,'bat']
+
+for i in range (0,len(a),2):
+    print(a[i])
+    
+    OUTPUT:- 
+12
+13
+17
+    
+    
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+---->NESTED if  elif :-
+
+first=input("enter the first no")
+second=input("enter the second no")
+sum=int(first)+int(second)
+
+if sum >= 3:                    //-> iss if ka dhyan rkhna bew line meeh space deke maat likhna indendation error aegi new line meeh ate hi turant likho
+    print("greater than 3 ")
+elif sum==2:
+    print("exactly 2")
+else:
+    print("less than 1")
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-->LAMBDA Function:-
+
+lambda function meeh arguments kitne bhi de skte hai arguments ye hai jo lambda ke baad likha hai a,b,c (3 arguments diye hai kitne bhi dedo but expression sirf
+ek rhega (expression wo hai jo colon ke baad likha hai a+b+c expression line sirf ek rhegi
+
+aur lambda ek anonymous function hai jisse x ke through call kiya ja rhe hai aur saree function ke unke khud ke naam hote hai but yha lambda x ke andar pda hai
+to x ko call kiye ho iss case meeh to smjh jao ki lambda ko call kr rhe hai 
+
+      x=lambda a,b,c:a+b+c
+      print(x(3,4,5))
+      
+      output= 12
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
