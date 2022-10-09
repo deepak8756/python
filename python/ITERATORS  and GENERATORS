@@ -1,0 +1,128 @@
+ITERATORS:-
+
+list is iterable kyu kyuki jab bhi koi list bnate hai hum simply for loop likhte hai aur print krate hai wo list ke saree elements ko print kradeta hai
+
+ex:-
+
+list1=[1,2,3,4,5,6,7,8,9]    -> ye list jaisi hi bnai waise hi ye memory meeh chli gai and now i am iterating in this list
+
+for i in list1:
+        print(i]
+        
+        output:-
+1
+2
+3
+4 
+5
+6
+7
+8
+9 list par iterable krke sbko print kra diya i ne sbko
+
+-------------------------------------------------------------------
+ITERATORS:-
+there is a in built function call iter()
+ye kya krta hai ye list ko convert krta hai iterator meeh 
+
+
+very important line:-   hum list ko convert krte hai iterators meeh  aur next next krke usko retrive krte hai aur memory meeh ek baar meeh ek jata hai next krke
+
+dekho example ye list hai
+--------------------------------------
+list1=[1,2,3,4,5,6,7,8,9]  
+
+it=iter(list1) ye hai wo line   hum list ko convert krte hai iterators meeh yha list iter meeh convert horha hai
+print(it)
+
+output derha hai :-  <list_iterator object at 0x7f9e6804e4c0>
+-----------------------------------------
+
+MAINE ITER FUNCTION KO PARAMETER DIYA HAI EK LIST
+
+upar iterable meeh jab list bnai na to wo jake different different memory locations par
+store hogai 
+whi iteration ke case meeh ye memory meeh store/initialize nhi hui jake jab tak hum next
+nhi krenge tab taak ye value jake memory meeh store nhi hogi
+  TO MATLAB KI AGAR KOI LIST KO CONVERT KIYA ITERATOR MEEH TO WO VALUES MEMEORY MEEH NHI HONGI INITIALIZE
+  JAB TAAK HUM next nhi use krte hai
+ jab tak inbuilt function next() nhi call kroge tab tak ye nhi hoga memory meeh initialize
+ aur jaise hi next ko call kiya to pehle no jo bhi hoga iterator meeh tab wo memory meeh intialize hoga
+ 
+ dekho :- 
+ 
+ list1=[1,2,3,4,5,6,7,8,9]  
+it=iter(list1)   -> list1 ko de diya as an argument iter functions ko jo iterable list thi
+print(next(it))// ye 1 print krke dega sirf pehla MTLB 1store hogya memory meeh
+
+//ABB FIRSE NEXT kroge to next element jake store ho jaega memory meeh
+
+print(next(it)) // 2 print kiya aur ye store bhi hogya jake memory meeh
+
+aisse hi  so onn krte jao next next
+
+
+
+-----------------TO JAB HUM LIST BNATE HAI WO JAKE MEMORY MEEH STORE HO JATI HAI AUR WO ITERABLE HOTI HAI KYUKI MEMORY MEEH SOTRE HAI KRTE CHLE JAO ITERATE
+
+BUT ITERATOR KE CASE MEEH EK ELEMENT HI JAKE MEMORY MEEH STORE HO SKTA HAI EK BAAR MEEH AT A TIME AUR WO BHI KAB JAB next KA USE KROGE TAB
+NEXT WAISE YE WHI LINKED LIST WALA HI HAI POINT KR RHA HAI EK EK ELEMENT KO AGEE BADH RHA HAI 
+
+s1=[123,"deepak",234,'a',"amit",9,"this"]
+it=iter(s1)   // ITER FUNCTION KO s1 WALI LIST DEDI PARAMETER MEEH AB YE MEMORY MEEH STORE NHI HAI AB NEXT NEXT KRTE JAO AUR EK EK KRKE YE MEMORY MEEH DALTA JAEGA
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))AGAR LIST KHTAM HOGI AUR USKE BAAD BHI NEXT KIYA TO YE ERROR AEGI \|/
+                                                                                  File "<string>", line 10, in <module>
+                                                                                               StopIteration
+                                                                                  
+ye ek trika hai iterator ke andar ki value dekhne ka next function ka use krke  dhyan rkho jo bhi value iterator ke andar hai
+wo ek ek krke hi memory meeh intialize hogi ek baar meeh nhi hogi imp hai dhyan rkhna isse
+
+----------------------------------------------------------------------------------------------------------------------------------------
+                  YE EK TRIKA HAI HAR BAAR NEXT KRTE JAO AUR DEKHTE JAO
+                  
+                  DUSRA TRIKA FOR LOOP RUN KRLO (ITERATOR PAR KAAM KREGA YE)JAISE ITERABLE PAR KRTA HAI
+
+DEKHO JAB next krte ho to jo list convert hui hai iteration meeh wo ek ke krke memory meeh initialize hoti hai theek hai aur agar wo list khtam hogai
+aur firse next likhe to EXCEPTION HANDLING KI ERROR ATII HAI  stop iteration jab bolta to next ko nhi pta kha rukna hai to to jab exception aegi tab rukega
+
+
+
+
+abb ajao for loop meeh simple for loop likho  DUSRA TRIKA NEXT NHI KRNA PDTA FOR LOOP MEEH
+
+list1=[1,2,3,4,5,6,7,8,9]  
+it=iter(list1)   LIST1 CONVERT HOGAI ITERATION MEEH
+for i in it:    FOR LOOP CHAL GYA I KO IT KE ANDAR BHEJ DIYA aur barri baari krke ek ek elemnt wo khud see memory meeh intialize krta jaega 
+    print((i))
+                            
+                            abb yha DEKHO NEXT AUR FOR LOOP MEEH DIFFERNCE YHI HAI KI KRTE TO DONO LOOG LIST JO CONVERT HUI HAI USSE MEMORY MEEH INITIALIZE
+                            BUT NEXT KA KUCH PTA NHI KHA RUKNA HAU ERROR AEGI EXCEPTION HANDLING TO RUKEGA BUT FOR LOOP KHUD EXCEPTION HANDLE KRTA FOR LOOP CHLAO
+                            WO KHUD HI LAST MEEH JAKE RUUK JATA HAI FOR LOOP NHI BOLTA LO STOP ITERATION YE ISLIYE HAI KYUKI FOR LOOP ITSELF EXCEPTION HANDLE KRTA
+                            AUR LAST KE BAAD AGEEE NHI JATA KHUD RUUK JATA HAI WO UTNA HI JATA JAI JITNA ITERATOR KE NADAR ELEMENT HAI USKE BAAD BAHAR AJATA HAI
+
+
+
+
+
+
+
+
+
+
+hum ITERATORS USE KYU KRTE HAI SUPPOSE LIST MEEH BHOOT SAREEE ELEMENTS HAI MILLIONS OF ELEMENTS
+TO WO TO JAKE MEMORY MEEH STORE HO JENGE  PAR AGAR WHI LIST KO ITERATOR MEEH CONVERT KRDU
+TO WO ITTNI MEMORY NHI LENGE JAB TAAK MEEH KHUD CALL NHI KRTA ITERATOR KO TAB TAAK WO MEMORY MEEH INITIALIZE HI NHI HONGE ISLIYE ITERATOR
+IMPORTANT HAI LIST TO PURA MEMORY MEEH INITIALIZE HO JATA FIR ITERATION HOTI BUT YHA 
+JAB TAAK HUM NHI KRENGE NEXT TAB TAAK WO MEMORY MEEH INTIALIZE NHI HOGI
+
+    
+    
+    ISLIYE KHA JATA HAI LIST IS ITERABLE AUR ITERATOR MEEH CHANGE KRNA HAI TO YE FUNCTION HMESHA LIKHNA PDEGA it=iter(list1)
+        mtlb ki agar koi list ko iterable see iterator meeh convert krna hai to ye iter () function likhenge
