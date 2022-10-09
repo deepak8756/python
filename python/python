@@ -232,7 +232,70 @@ print(aa)
 output:- 9
 ---------------------------------
 
-7->
+7-> Agar purri list ko khali krna hai to list_ka_naam.clear()
+
+----------------------------------------------------------------------------
+
+8-> list ko reverse krna ho to 
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+
+print(list(reversed(a)))  //ye list ko reversed krke degi  ['xyza', 'z', 9, 'a', 'amit', 30, 20, 'deepak', 10]
+
+print(a)  // ye normal degi whi print kregi  [10, 'deepak', 20, 30, 'amit', 'a', 9, 'z', 'xyza']
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BREAK AND CONTINUE:-  
+
+BREAK:- jha break likh doge wha break hogya uske agee ka print nhi kraega
+
+names=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+for name in names:        //name mera iterate kr rha hai names par (i kehte hai whi yha name maanlo)
+    if name=="amit":    //name mera iterate kr rha hai names par agar name mera iterate krte krte amit par phucha to wha see break to amit aur uske baad wale nhi honge print
+        break;
+    print(name)
+    
+  OUTPUT:- 
+  
+10
+deepak
+20
+30
+---------------------------------------------------------------------------
+
+CONTINUE:- 
+
+skip kradete hai isme bass jaise example :- names=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"] iss list meeh see names naam ki jab amit print hone jae to usse
+skip kradu aur uske baad ke bakiyo ko print krdu to continue lgao
+
+
+
+names=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+
+for name in names:
+    if name=="amit":
+        continue;
+    print(name)
+    
+    
+OUTPUT:- 
+10
+deepak
+20
+30
+a
+9
+z
+xyza
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
