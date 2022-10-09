@@ -132,40 +132,7 @@ to x ko call kiye ho iss case meeh to smjh jao ki lambda ko call kr rhe hai
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-->  LIST:-
 
-list meeh kisi bhi trah ke primitive data type store krskte hai 
-primitive ya inbuilt data types ek hi hai->   int,char,float,string,double   Aur list ko bnate time square bracket ka use hota hai
-
-SOME OPERATIONS ON LIST ARE:-
-
-1-> simple ek line meeh print kradega print statement
-
-a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
-print(a)
-
-output:-  [10, 'deepak', 20, 30, 'amit', 'a', 9, 'z', 'xyza']
--------------------------------
-
-2->  for loop ka use krke
-
-a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
-for i in a:
-print(i)
-
-
-output:-  
-10
-deepak
-20
-30
-amit
-a
-9
-z
-xyza
-
-------------------------------------
 . 
 3->range ka use krke iterate kro
 
