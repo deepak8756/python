@@ -1,3 +1,38 @@
+->  LIST:-
+
+list meeh kisi bhi trah ke primitive data type store krskte hai 
+primitive ya inbuilt data types ek hi hai->   int,char,float,string,double   Aur list ko bnate time square bracket ka use hota hai
+
+SOME OPERATIONS ON LIST ARE:-
+
+1-> simple ek line meeh print kradega print statement
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+print(a)
+
+output:-  [10, 'deepak', 20, 30, 'amit', 'a', 9, 'z', 'xyza']
+-------------------------------
+
+2->  for loop ka use krke
+
+a=[10,"deepak",20,30,"amit",'a',9,'z',"xyza"]
+for i in a:
+print(i)
+
+
+output:-  
+10
+deepak
+20
+30
+amit
+a
+9
+z
+xyza
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 TUPLES:-   tuples list ki trah hote hai but immutable hote hai(non changeable)
 
 Tuples are used to store multiple items.
@@ -77,4 +112,102 @@ Printing elements between Range 4-9:
 ----------------------------------------------------------------------------------
 
 
-SET:-
+Functions that can be used for both lists and tuples:
+
+len(), max(), min(), sum(), any(), all(), sorted()
+
+Methods that cannot be used for tuples:
+
+append(), insert(), remove(), pop(), clear(), sort(), reverse()
+
+Methods that can be used for both lists and tuples:
+
+count(), Index()
+
+we generally use ‘tuples’ for heterogeneous (different) data types and ‘lists’ for homogeneous (similar) data types.
+Tuples can be stored in lists.	Iterating through a ‘tuple’ is faster than in a ‘list’.
+Lists can be stored in tuples.	‘Lists’ are mutable whereas ‘tuples’ are immutable.
+Both ‘tuples’ and ‘lists’ can be nested.	Tuples that contain immutable elements can be used as a key for a dictionary.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+SET:-  set ko intialize krte hai curly brackets see aur dictionery ko bhi 
+       set meeh index exist nhi krta to index ka use krke koi value nhi krskte access 
+       set meeh duplicate nhi daal skte sirf unique
+       A Set is an unordered collection data type that is iterable, mutable and has no duplicate elements. 
+       Set is define in { }
+       
+       ex:-
+       se={10,20,30,40,10}    OUTPUT:-  {40, 10, 20, 30}  dekho 10 do baar dala par ek hi baar derha hai aur order b idhar udhar hai 40 pehle aya
+       print(se)
+       
+       
+       
+       OPERATIONS IN SETS:-
+       
+1-> adding elements in a existing sets
+
+ 
+
+myset = set(["a", "b", "c"])
+print(myset)
+ 
+# Adding element to the set
+myset.add("d")
+print(myset)
+
+output:-
+{'c', 'b', 'a'}
+{'d', 'c', 'b', 'a'}
+
+----------------------------------
+2-> UNION do set ko merge krdega
+
+setname.union(jiss_set_ke_sath_union_krna_uska_naam)  ya to ye use krlo .union
+ya ye use krlo    |  iss line ko mtlb union hi hai
+
+
+
+
+
+name={"deepak","amit","akash"}
+lastname={"singh","mishra","pandey"}
+
+names=name.union(lastname)     ya ye bhi likh skte hai   names=name|lastname   ye bhi whi krega
+print(names);
+
+output:-{'deepak', 'singh', 'pandey', 'akash', 'amit', 'mishra'}
+------------------------------------------------------------
+
+3->  INTERSECTION:-   wo do set jisme dono cheez common hai usse kehte hai intersection
+
+s1=set()
+s2=set()
+
+for i in range(0,5):
+    s1.add(i)
+    
+for i in range(2,4):
+    s2.add(i)
+    
+s3=s1.intersection(s2)      ya ye bhi likh skte hai   names=name&lastname   ye bhi whi krega
+print(s3)
+
+output:-  {2,3}
+
+-----------------------------------------------------------------------------
+ 
+       
+-> DICTIONARY-
+Dictionary in Python is a collection of keys values, used to store data values like a map, 
+which, unlike other data types which hold only a single value as an element.
+
+di={1:"deepak",2:"singh",3:"ds"}
+print(di)
+
+output:-
+{1: 'deepak', 2: 'singh', 3: 'ds'}
+
+
+
