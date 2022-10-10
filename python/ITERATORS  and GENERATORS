@@ -1,7 +1,7 @@
 ITERATORS:-
 
 list is iterable kyu kyuki jab bhi koi list bnate hai hum simply for loop likhte hai aur print krate hai wo list ke saree elements ko print kradeta hai
-
+LIST IS A COLLECTION jab collection ke har ek element par iteratre krte hai ussi ko kehte hai iterables
 ex:-
 
 list1=[1,2,3,4,5,6,7,8,9]    -> ye list jaisi hi bnai waise hi ye memory meeh chli gai and now i am iterating in this list
@@ -22,6 +22,7 @@ for i in list1:
 
 -------------------------------------------------------------------
 ITERATORS:-
+iterator act like a dynamic memory jab call kroge tabhi initialize krega
 there is a in built function call iter()
 ye kya krta hai ye list ko convert krta hai iterator meeh 
 
@@ -80,6 +81,15 @@ print(next(it))
 print(next(it))AGAR LIST KHTAM HOGI AUR USKE BAAD BHI NEXT KIYA TO YE ERROR AEGI \|/
                                                                                   File "<string>", line 10, in <module>
                                                                                                StopIteration
+                                                                                               
+                                  next() meeh bhi exception handling handle krskte hai
+                                  try:
+                                  print(next(it))
+                                  except StopIteration:  
+ agar ye aya stop iteration to iterator is empty boldega mtlb ab iterator KE andar kuch nhi iterate krne ko
+                                  print("the iterator is empty")
+                                  
+                                  
                                                                                   
 ye ek trika hai iterator ke andar ki value dekhne ka next function ka use krke  dhyan rkho jo bhi value iterator ke andar hai
 wo ek ek krke hi memory meeh intialize hogi ek baar meeh nhi hogi imp hai dhyan rkhna isse
@@ -126,3 +136,14 @@ JAB TAAK HUM NHI KRENGE NEXT TAB TAAK WO MEMORY MEEH INTIALIZE NHI HOGI
     
     ISLIYE KHA JATA HAI LIST IS ITERABLE AUR ITERATOR MEEH CHANGE KRNA HAI TO YE FUNCTION HMESHA LIKHNA PDEGA it=iter(list1)
         mtlb ki agar koi list ko iterable see iterator meeh convert krna hai to ye iter () function likhenge
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+GENERATORS:-
+
+
+
+
